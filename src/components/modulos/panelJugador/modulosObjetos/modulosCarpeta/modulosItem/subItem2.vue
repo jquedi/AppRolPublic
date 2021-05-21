@@ -106,7 +106,7 @@
   </div>
 </template>
 <script>
-import subItem2 from "@/components/modulos/modulosObjetos/modulosCarpeta/modulosItem/subItem2.vue";
+import subItem2 from "@/components/modulos/panelJugador/modulosObjetos/modulosCarpeta/modulosItem/subItem2.vue";
 
 export default {
   name: "subItem2",

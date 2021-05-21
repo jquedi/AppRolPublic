@@ -91,6 +91,7 @@ module.exports = {
         '5%': '5%',
         'content': 'fit-content',
         'calc1': 'calc(100% - 1.5rem)',
+        'calc2': 'calc(100% - 7rem)',
       },
       minWidth: {
         'content': 'fit-content',

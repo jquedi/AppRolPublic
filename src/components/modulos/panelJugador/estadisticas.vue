@@ -28,8 +28,8 @@
 
 <script>
 import axios from "axios";
-import graficaPoligonal from "@/components/modulos/modulosEstadisticas/graficaPoligonal.vue";
-import tablaClasica from "@/components/modulos/modulosEstadisticas/tablaClasica.vue";
+import graficaPoligonal from "@/components/modulos/panelJugador/modulosEstadisticas/graficaPoligonal.vue";
+import tablaClasica from "@/components/modulos/panelJugador/modulosEstadisticas/tablaClasica.vue";
 
 export default {
   name: "estadisticas",

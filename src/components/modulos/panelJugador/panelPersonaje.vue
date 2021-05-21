@@ -56,8 +56,8 @@
 </template>
 
 <script>
-import equipado from "@/components/modulos/modulosPersonaje/equipado.vue";
-import efectos from "@/components/modulos/modulosPersonaje/efectos.vue";
+import equipado from "@/components/modulos/panelJugador/modulosPersonaje/equipado.vue";
+import efectos from "@/components/modulos/panelJugador/modulosPersonaje/efectos.vue";
 
 export default {
   name: "panelPersonaje",

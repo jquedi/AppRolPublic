@@ -38,8 +38,8 @@
 </template>
 
 <script>
-import historialDados from "@/components/modulos/modulosDados/historialDados.vue";
-import selectDados from "@/components/modulos/modulosDados/selectDados.vue";
+import historialDados from "@/components/modulos/panelJugador/modulosDados/historialDados.vue";
+import selectDados from "@/components/modulos/panelJugador/modulosDados/selectDados.vue";
 
 export default {
   name: "paneldado",

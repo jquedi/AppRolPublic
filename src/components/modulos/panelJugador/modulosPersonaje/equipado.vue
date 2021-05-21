@@ -234,8 +234,8 @@
 
 <script>
 import axios from "axios";
-import slotEquipado from "@/components/modulos/modulosPersonaje//modulosEquipado/slotEquipado.vue";
-import slotEquipadoOtros from "@/components/modulos/modulosPersonaje//modulosEquipado/slotEquipadoOtros.vue";
+import slotEquipado from "@/components/modulos/panelJugador/modulosPersonaje//modulosEquipado/slotEquipado.vue";
+import slotEquipadoOtros from "@/components/modulos/panelJugador/modulosPersonaje//modulosEquipado/slotEquipadoOtros.vue";
 
 export default {
   name: "equipado",

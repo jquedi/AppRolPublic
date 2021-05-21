@@ -373,9 +373,9 @@
 
 <script>
 import axios from "axios";
-import item2 from "@/components/modulos/modulosObjetos/modulosCarpeta/item2.vue";
+import item2 from "@/components/modulos/panelJugador/modulosObjetos/modulosCarpeta/item2.vue";
 import ClickOutside from "vue-click-outside";
-import itemPapelera from "@/components/modulos/modulosObjetos/modulosCarpeta/itemPapelera.vue";
+import itemPapelera from "@/components/modulos/panelJugador/modulosObjetos/modulosCarpeta/itemPapelera.vue";
 
 export default {
   name: "itemCarpeta2",

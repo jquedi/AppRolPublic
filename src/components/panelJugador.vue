@@ -10,10 +10,6 @@
 
   <!-- Inicio de sesion!! -->
 
-    <loggin v-if="(player.user == '' || player.user == null)"
-      @iniciarSesionF="iniciarSesionF"
-     />
-
     <selectPersonaje v-if="(player.user != '' && player.user != null) && player.character == 0"
        @selectPersonajeF="selectPersonajeF"
        :usuario="this.player.user"
@@ -603,20 +599,19 @@
 import axios from "axios";
 import VueResizable from "vue-resizable";
 
-import loggin from "@/components/modulos/loggin/loggin.vue";
 import selectPersonaje from "@/components/modulos/loggin/selectPersonaje.vue";
-import menu2 from "@/components/modulos/menu.vue";
+import menu2 from "@/components/modulos/panelJugador/menu.vue";
 import BtnCloseSlideH from "@/components/otros/BtnCloseSlideH.vue";
-import group from "@/components/modulos/group.vue";
-import paneldado from "@/components/modulos/paneldado.vue";
-import estadisticas from "@/components/modulos/estadisticas.vue";
-import objetos from "@/components/modulos/panelObjetos.vue";
-import notasJugador from "@/components/modulos/notasJugador.vue";
-import notas from "@/components/modulos/notas.vue";
-import chat from "@/components/modulos/chat.vue";
-import panelMapa from "@/components/modulos/panelMapa.vue";
-import panelHabilidades from "@/components/modulos/panelHabilidades.vue";
-import panelPersonaje from "@/components/modulos/panelPersonaje.vue";
+import group from "@/components/modulos/panelJugador/group.vue";
+import paneldado from "@/components/modulos/panelJugador/paneldado.vue";
+import estadisticas from "@/components/modulos/panelJugador/estadisticas.vue";
+import objetos from "@/components/modulos/panelJugador/panelObjetos.vue";
+import notasJugador from "@/components/modulos/panelJugador/notasJugador.vue";
+import notas from "@/components/modulos/panelJugador/notas.vue";
+import chat from "@/components/modulos/panelJugador/chat.vue";
+import panelMapa from "@/components/modulos/panelJugador/panelMapa.vue";
+import panelHabilidades from "@/components/modulos/panelJugador/panelHabilidades.vue";
+import panelPersonaje from "@/components/modulos/panelJugador/panelPersonaje.vue";
 
 export default {
   name: "panelJugador",
@@ -634,11 +629,10 @@ export default {
     panelMapa,
     panelHabilidades,
     panelPersonaje,
-    loggin,
     selectPersonaje,
   },
   props: {
-    titulo: String,
+    player: Object,
   },
   watch: {
     hideGroup: function (val) {
@@ -658,9 +652,7 @@ export default {
   methods: {
 
     logOut(){
-      this.player.user = '';
-      this.player.character = 0;
-      localStorage.removeItem("userName");
+      this.$emit("logOut", 1);
     },
 
      selectPersonajeF(val){
@@ -668,15 +660,12 @@ export default {
        this.personaje = val;
      },
     
-    iniciarSesionF(val){
-      this.player.user = val;
-    },
 
 
 
     async loadDataF() {
       while (this.actualizador > 0) {
-        // this.cargarDatos();
+        this.cargarDatos();
         await this.sleep(2000);
       }
     },
@@ -1949,14 +1938,6 @@ export default {
           character: "Personaje 5",
           rol: "player",
         },
-      },
-      player: {
-        id: 1,
-        user: localStorage.getItem("userName"),
-        character: 0,
-        rol: "player",
-        game: 2,
-        system: 2,
       },
     };
   },

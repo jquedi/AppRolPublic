@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import btnMenu from "@/components/modulos/modulosMenu/btnMenu.vue";
+import btnMenu from "@/components/modulos/panelJugador/modulosMenu/btnMenu.vue";
 
 export default {
   name: "menu2",

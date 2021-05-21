@@ -150,8 +150,8 @@
 
 <script>
 import axios from "axios";
-import itemCarpeta2 from "@/components/modulos/modulosObjetos/itemCarpeta2.vue";
-import itemInfo from "@/components/modulos/modulosObjetos/itemInfo.vue";
+import itemCarpeta2 from "@/components/modulos/panelJugador/modulosObjetos/itemCarpeta2.vue";
+import itemInfo from "@/components/modulos/panelJugador/modulosObjetos/itemInfo.vue";
 
 export default {
   name: "objetos",

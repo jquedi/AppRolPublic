@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import aliadoMiniatura from "@/components/modulos/modulosGrupo/aliadoMiniatura.vue";
+import aliadoMiniatura from "@/components/modulos/panelJugador/modulosGrupo/aliadoMiniatura.vue";
 
 export default {
   name: "group",
